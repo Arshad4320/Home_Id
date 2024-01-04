@@ -9,18 +9,17 @@ const Neighborhood = () => {
   const bannerStyle = {
     backgroundImage: `url(${banner})`,
     backgroundSize: "45%",
-    height: "430px",
     backgroundRepeat: "no-repeat",
   };
 
   return (
     <div className=" bg-primary ">
       <div style={bannerStyle}>
-        <div className="max-w-7xl mx-auto py-20  grid grid-cols-1 md:grid-cols-2 ">
-          <div className="w-[550px] h-[280px] ">
+        <div className="md:max-w-7xl mx-auto md:py-20  grid md:grid-cols-1 lg:grid-cols-2">
+          <div className="w-[400px] sm:w-[640px] md:w-[768px] lg:w-[512px] xl:w-[640px] mt-10 md:mt-0 px-5 md:mx-0 h-[180px] md:h-[280px] ">
             <img className="w-full h-full rounded-md" src={banner2} alt="" />
           </div>
-          <div className="py-10">
+          <div className="  py-10">
             <Heading className="text-white" label={"Find your neighborhood"} />
             <Paragraph
               className="text-white my-4"
@@ -28,7 +27,7 @@ const Neighborhood = () => {
                 "Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse"
               }
             />
-            <div className="flex">
+            <div className="flex mx-5 ">
               <input
                 className="rounded-md rounded-r-none px-4 pr-16"
                 type="text"

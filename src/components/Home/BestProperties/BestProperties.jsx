@@ -6,11 +6,14 @@ import Paragraph from "../../paragraph/paragraph";
 const BestProperties = () => {
   return (
     <div className="max-w-7xl mx-auto pt-20 mb-14 ">
-      <div className="flex justify-between ">
-        <Heading label={"  Best Properties For Sale"} />
+      <div className="  md:flex  justify-between ">
+        <Heading
+          className={" mb-3 md:mb-0"}
+          label={"  Best Properties For Sale"}
+        />
         <br />
 
-        <Button label="Seel All Properties" />
+        <Button className="" label="Seel All Properties" />
       </div>
       <Paragraph
         label={

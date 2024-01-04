@@ -39,16 +39,16 @@ const carts = [
 const ConstantCard = () => {
   return (
     <div className="bg-green-50 mt-20">
-      <div className="max-w-7xl mx-auto  py-10">
+      <div className="md:max-w-7xl mx-5 md:mx-auto  py-10">
         <div className="max-w-2xl mx-auto">
           <Heading label="We have the most listings and constant updates. So you’ll never miss out." />
         </div>
-        <div className="grid grid-col-1 gap-5 md:grid-cols-2 lg:grid-cols-3 py-10">
+        <div className="grid grid-col-1 gap-5 md:grid-cols-1 md:mx-7 lg:grid-cols-3 py-10">
           {carts.map((cart) => {
             return (
-              <div className=" py-8 " key={cart.id}>
-                <div className="flex gap-1 justify-center shadow-md hover:shadow-xl bg-white rounded-md p-8">
-                  <div className="h-20 w-full mt-4">
+              <div className=" py-8 lg:py-4" key={cart.id}>
+                <div className="flex gap-1 justify-center md:gap-8 lg:gap-4 shadow-md hover:shadow-xl bg-white rounded-md p-8 lg:h-72 xl:h-60">
+                  <div className="h-24 md:w-28 lg:h-24 lg:w-64 w-full ">
                     <img className="h-full w-full" src={cart.img} alt="" />
                   </div>
                   <div className="m-3">

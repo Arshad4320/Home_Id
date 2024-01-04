@@ -5,13 +5,14 @@ import Paragraph from "../../paragraph/paragraph";
 
 const PropertiesRent = () => {
   return (
-    <div className="max-w-7xl mx-auto pt-20  mb-14">
-      <div className="flex justify-between ">
-        <Heading label={"Best Properties For Rent"} />
+    <div className="md:max-w-7xl md:mx-auto pt-20  mb-14">
+      <div className="mx-5 md:mx-0 md:flex justify-between ">
+        <Heading className="mb-10 md:mb-0" label={"Best Properties For Rent"} />
         <Button label={"See All Properties"} />
       </div>
       <div className="">
         <Paragraph
+          className="px-5 md:mx-0"
           label={
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit"
           }

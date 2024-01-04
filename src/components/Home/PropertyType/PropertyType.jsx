@@ -5,8 +5,8 @@ import Paragraph from "../../paragraph/paragraph";
 
 const PropertyType = () => {
   return (
-    <div className="max-w-7xl mx-auto py-16 flex">
-      <div className="w-1/4">
+    <div className="lg:max-w-7xl mx-auto py-16 lg:flex">
+      <div className="w-full  lg:w-2/6">
         <Heading label={"Explore by Property Type"} />
         <Paragraph
           label={
@@ -15,7 +15,7 @@ const PropertyType = () => {
         />
         <Button label={"+2300 Available Properties"} />
       </div>
-      <div className="w-3/4 ">
+      <div className="  lg:w-4/6 ">
         <PropertyTypeCarusol />
       </div>
     </div>

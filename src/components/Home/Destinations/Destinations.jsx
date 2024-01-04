@@ -39,7 +39,7 @@ const cards = [
 ];
 const Destinations = () => {
   return (
-    <div className="max-w-7xl mx-auto pt-20 mb-14 ">
+    <div className="max-w-7xl  md:mx-auto pt-20 mb-14 ">
       <div>
         <Heading label={"Destinations We Love The Most"} />
         <Paragraph
@@ -48,7 +48,7 @@ const Destinations = () => {
             "Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit"
           }
         />
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-7">
+        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:mx-5">
           {cards.map((card) => {
             return (
               <div className="relative group" key={card.id}>

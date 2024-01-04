@@ -3,7 +3,7 @@
 const Heading = ({ label, className }) => {
   return (
     <div
-      className={`relative text-4xl  font-medium text-gray-800 ${className}`}
+      className={`relative text-4xl mx-5   font-medium text-gray-800 ${className}`}
     >
       <div className="relative z-10 ">{label}</div>
       <div
@@ -14,6 +14,11 @@ const Heading = ({ label, className }) => {
           borderBottom: "4px solid",
           position: "absolute",
           width: "80px",
+          // Add this line for default text alignment
+          // "@media (max-width: 400px)": {
+          //   textAlign: "center",
+          //   color: "red",
+          // },
         }}
       />
     </div>

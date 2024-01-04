@@ -41,9 +41,21 @@ const PropertyTypeCarusol = () => {
     arrows: false,
     responsive: [
       {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+          //   centerMode: true,
+          //   centerPadding: "0 20px",
+          //   centerMargin: " 20px",
+        },
+      },
+      {
         breakpoint: 576,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -52,10 +64,11 @@ const PropertyTypeCarusol = () => {
           //   centerMargin: " 20px",
         },
       },
+
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -65,9 +78,9 @@ const PropertyTypeCarusol = () => {
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -76,7 +89,7 @@ const PropertyTypeCarusol = () => {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -89,7 +102,7 @@ const PropertyTypeCarusol = () => {
 
   return (
     <>
-      <div className="relative  ">
+      <div className="relative  md:mx-7 lg:mx-4">
         <button className="" onClick={() => slider?.current?.slickNext()}>
           <RiArrowDropRightLine className=" mt-24 absolute  right-[0] lg:right-0  z-10 h-[45px] w-[45px] rounded-full bg-gray-50 shadow-md  text-gray-700 hover:bg-secondary hover:text-white transition ease-in-out delay-150  " />
         </button>
@@ -97,7 +110,7 @@ const PropertyTypeCarusol = () => {
           <RiArrowDropLeftLine className="absolute mt-24 left-[0] lg:left-0 z-20 h-[45px] w-[45px] rounded-full bg-gray-50 shadow-md  text-gray-700 hover:bg-secondary hover:text-white transition ease-in-out delay-150" />
         </button>
       </div>
-      <Slider ref={slider} className="px-20" {...settings}>
+      <Slider ref={slider} className="px-18" {...settings}>
         {carts.map((cart) => (
           <div
             key={cart.id}

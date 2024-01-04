@@ -35,7 +35,7 @@ const partnerLogo = [
 const Partner = () => {
   return (
     <div className="relative py-2">
-      <div className="max-w-7xl mx-auto  my-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 ">
+      <div className="max-w-7xl mx-auto  my-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 ">
         {partnerLogo.map((logo) => {
           return (
             <div key={logo.id} className="flex justify-center items-center ">
