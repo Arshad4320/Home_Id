@@ -4,6 +4,7 @@ import Navbar from "./../../../share/Navbar/Navbar";
 import SearchInput from "./SearchInput";
 import ScrollNavbar from "../../../share/Navbar/ScrollNavbar";
 import { useEffect, useState } from "react";
+import MobileNavber from "../../../share/Navbar/MobileNavbar";
 
 const Header = () => {
   const headerStyle = {
@@ -43,6 +44,7 @@ const Header = () => {
   return (
     <div>
       <div style={headerStyle}>
+        <MobileNavber />
         <Navbar />
         <ScrollNavbar show={scrolling} />
         <div className="flex items-center justify-center">

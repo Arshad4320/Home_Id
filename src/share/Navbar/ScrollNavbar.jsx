@@ -5,7 +5,7 @@ import logo from "../../assets/image/logo2 .png";
 const ScrollNavbar = ({ show }) => {
   return (
     <div
-      className={`bg-white  fixed top-0 w-full shadow-md transition-all duration-700 ease-in-out z-40 ${
+      className={`bg-white hidden md:block fixed top-0 w-full shadow-md transition-all duration-700 ease-in-out z-40 ${
         show ? "opacity-100" : "opacity-0"
       }`}
     >
