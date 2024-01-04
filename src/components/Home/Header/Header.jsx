@@ -16,9 +16,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // const currentScrollY = window.scrollY;
       const currentScrollY = window.scrollY;
-      console.log(currentScrollY);
+      // console.log(currentScrollY);
 
       if (currentScrollY > prevScrollY) {
         // Scrolling down
