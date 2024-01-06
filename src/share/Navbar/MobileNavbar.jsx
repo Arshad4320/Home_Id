@@ -40,27 +40,27 @@ const MobileNavber = () => {
   );
 
   return (
-    <div className=" bg-primary block md:hidden  transition-all duration-700 ease-in-out p-4 0  shadow-md ">
+    <div className=" bg-primary block md:hidden   p-4 0  shadow-md ">
       <div className="flex justify-between    ">
         <button
           onClick={toggleMenu}
-          className=" text-white  focus:outline-none duration-700 ease-in-out flex"
+          className=" text-white  focus:outline-none  flex"
         >
           {isMenuOpen ? (
-            <HiMiniXMark className=" h-6 w-6 transition-all duration-700 ease-in-out  ml-4   " />
+            <HiMiniXMark className=" h-6 w-6   ml-4   " />
           ) : (
             <div className="text-white">
-              <FaOutdent className=" h-6 w-6 transition-all duration-700 ease-in-out  ml-4" />
+              <FaOutdent className=" h-6 w-6   ml-4" />
             </div>
           )}
         </button>
 
-        <div className=" sm:block md:block   xl:hidden   font-semibold w-[170px] h-[40px] px-5  rounded-md  lg:hidden ">
+        <div className=" font-semibold w-[170px] h-[40px] px-5  rounded-md  ">
           <img className="w-ful h-full" src={logo} alt="" />
         </div>
       </div>
       {/* Menu */}
-      <div className={`${isMenuOpen ? "block" : "hidden"} lg:block xl:block  `}>
+      <div className={`${isMenuOpen ? "block" : "hidden"}   `}>
         {/* Menu Content */}
         <div className=" scroll-m-3 ">
           <ul className="space-y-2 ">
