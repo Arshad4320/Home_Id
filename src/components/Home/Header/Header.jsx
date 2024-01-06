@@ -17,7 +17,6 @@ import {
   bedRoomOptions,
   homeType,
 } from "../../SelectOptions/Options";
-import RangeComponent from "../../../helper/RangeComponent";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -63,16 +62,16 @@ const Header = () => {
         <ScrollNavbar show={scrolling} />
         <div className="flex items-center justify-center">
           <div className="py-16">
-            <div className="sm:mt-20 md:mt-24   md:mx-18 md:text-center">
+            <div className="sm:mt-20 md:mt-24 mx-4 md:mx-8  md:mx-18 md:text-center">
               <p className="text-white font-medium text-2xl ">
                 LET US GUIDE YOUR HOME
               </p>
-              <h1 className="text-white font-semibold mt-4 md:mt-10  text-4xl sm:text-5xl md:text-7xl lg:text-7xl  ">
+              <h1 className="text-white font-semibold mt-4 md:mt-10  text-4xl sm:text-5xl md:text-6xl lg:text-7xl  ">
                 Find Your Dream Home
               </h1>
               {/* search section*/}
             </div>
-            <SearchInput />
+            <SearchInput open={open} setOpen={setOpen} />
             <div className="max-w-7xl mx-auto mt-20 bg-white rounded-md hidden lg:block">
               <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -116,13 +115,13 @@ const Header = () => {
                         SEARCH
                       </label>
                       <br />
-                      <div className="flex items-center justify-center">
+                      <div className="flex items-center justify-center border border-gray-300 mt-1  rounded py-2 px-2">
                         <input
-                          className="outline-none border border-gray-300 rounded-sm px-2 py-2 mt-1"
+                          className="outline-none   "
                           placeholder="find something"
                           {...register("exampleRequired")}
                         />{" "}
-                        <CgSearch className="-ml-7 text-2xl text-gray-400" />
+                        <CgSearch className=" text-2xl text-gray-400 " />
                       </div>
                     </div>
 
@@ -156,134 +155,183 @@ const Header = () => {
                     </div>
                   </div>
                   {open && (
-                    <div className="grid grid-cols-4 gap-5  p-12 transition-all duration-700 ease-in-out">
-                      <div>
-                        <label
-                          htmlFor=""
-                          className="text-gray-500 font-semibold text-sm"
-                        >
-                          BEDROOMS
-                        </label>
-                        <br />
-                        <Select
-                          {...register("example")}
-                          options={bedRoomOptions}
-                          className="outline-none text-gray-600 mt-1"
-                          styles={{
-                            control: (provided) => ({
-                              ...provided,
-                              height: "full", // Set the height of the control
-                            }),
-                            menu: (provided) => ({
-                              ...provided,
-                              height: "100%", // Set the height of the menu
-                            }),
-                            option: (provided, state) => ({
-                              ...provided,
-                              backgroundColor: state.isSelected
-                                ? "#0ec6d5"
-                                : "#fff",
-                              color: state.isSelected ? "#fff" : "#000",
-                            }),
-                          }}
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor=""
-                          className="text-gray-500 font-semibold text-sm"
-                        >
-                          BATHROOMS
-                        </label>
-                        <br />
+                    <div>
+                      <div className="grid grid-cols-4 gap-5  p-12 transition-all duration-700 ease-in-out">
+                        <div>
+                          <label
+                            htmlFor=""
+                            className="text-gray-500 font-semibold text-sm"
+                          >
+                            BEDROOMS
+                          </label>
+                          <br />
+                          <Select
+                            {...register("example")}
+                            options={bedRoomOptions}
+                            className="outline-none text-gray-600 mt-1"
+                            styles={{
+                              control: (provided) => ({
+                                ...provided,
+                                height: "full", // Set the height of the control
+                              }),
+                              menu: (provided) => ({
+                                ...provided,
+                                height: "100%", // Set the height of the menu
+                              }),
+                              option: (provided, state) => ({
+                                ...provided,
+                                backgroundColor: state.isSelected
+                                  ? "#0ec6d5"
+                                  : "#fff",
+                                color: state.isSelected ? "#fff" : "#000",
+                              }),
+                            }}
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor=""
+                            className="text-gray-500 font-semibold text-sm"
+                          >
+                            BATHROOMS
+                          </label>
+                          <br />
 
-                        <Select
-                          {...register("example")}
-                          options={bathRoomOptions}
-                          className="outline-none text-gray-600 mt-1"
-                          styles={{
-                            control: (provided) => ({
-                              ...provided,
-                              height: "full",
-                            }),
-                            menu: (provided) => ({
-                              ...provided,
-                              height: "100%",
-                            }),
-                            option: (provided, state) => ({
-                              ...provided,
-                              backgroundColor: state.isSelected
-                                ? "#0ec6d5"
-                                : "#fff",
-                              color: state.isSelected ? "#fff" : "#000",
-                            }),
-                          }}
-                        />
+                          <Select
+                            {...register("example")}
+                            options={bathRoomOptions}
+                            className="outline-none text-gray-600 mt-1"
+                            styles={{
+                              control: (provided) => ({
+                                ...provided,
+                                height: "full",
+                              }),
+                              menu: (provided) => ({
+                                ...provided,
+                                height: "100%",
+                              }),
+                              option: (provided, state) => ({
+                                ...provided,
+                                backgroundColor: state.isSelected
+                                  ? "#0ec6d5"
+                                  : "#fff",
+                                color: state.isSelected ? "#fff" : "#000",
+                              }),
+                            }}
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor=""
+                            className="text-gray-500 font-semibold text-sm"
+                          >
+                            ALL CITIES
+                          </label>
+                          <br />
+                          <Select
+                            {...register("example")}
+                            options={allCitiesOptions}
+                            className="outline-none text-gray-600 mt-1"
+                            styles={{
+                              control: (provided) => ({
+                                ...provided,
+                                height: "full", // Set the height of the control
+                              }),
+                              menu: (provided) => ({
+                                ...provided,
+                                height: "100%", // Set the height of the menu
+                              }),
+                              option: (provided, state) => ({
+                                ...provided,
+                                backgroundColor: state.isSelected
+                                  ? "#0ec6d5"
+                                  : "#fff",
+                                color: state.isSelected ? "#fff" : "#000",
+                              }),
+                            }}
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor=""
+                            className="text-gray-500 font-semibold text-sm"
+                          >
+                            ALL AREAS
+                          </label>
+                          <br />
+                          <Select
+                            {...register("example")}
+                            options={allAreaOptions}
+                            className="outline-none text-gray-600 mt-1"
+                            styles={{
+                              control: (provided) => ({
+                                ...provided,
+                                height: "full", // Set the height of the control
+                              }),
+                              menu: (provided) => ({
+                                ...provided,
+                                height: "100%", // Set the height of the menu
+                              }),
+                              option: (provided, state) => ({
+                                ...provided,
+                                backgroundColor: state.isSelected
+                                  ? "#0ec6d5"
+                                  : "#fff",
+                                color: state.isSelected ? "#fff" : "#000",
+                              }),
+                            }}
+                          />
+                        </div>
                       </div>
-                      <div>
-                        <label
-                          htmlFor=""
-                          className="text-gray-500 font-semibold text-sm"
-                        >
-                          ALL CITIES
-                        </label>
-                        <br />
-                        <Select
-                          {...register("example")}
-                          options={allCitiesOptions}
-                          className="outline-none text-gray-600 mt-1"
-                          styles={{
-                            control: (provided) => ({
-                              ...provided,
-                              height: "full", // Set the height of the control
-                            }),
-                            menu: (provided) => ({
-                              ...provided,
-                              height: "100%", // Set the height of the menu
-                            }),
-                            option: (provided, state) => ({
-                              ...provided,
-                              backgroundColor: state.isSelected
-                                ? "#0ec6d5"
-                                : "#fff",
-                              color: state.isSelected ? "#fff" : "#000",
-                            }),
-                          }}
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor=""
-                          className="text-gray-500 font-semibold text-sm"
-                        >
-                          ALL AREAS
-                        </label>
-                        <br />
-                        <Select
-                          {...register("example")}
-                          options={allAreaOptions}
-                          className="outline-none text-gray-600 mt-1"
-                          styles={{
-                            control: (provided) => ({
-                              ...provided,
-                              height: "full", // Set the height of the control
-                            }),
-                            menu: (provided) => ({
-                              ...provided,
-                              height: "100%", // Set the height of the menu
-                            }),
-                            option: (provided, state) => ({
-                              ...provided,
-                              backgroundColor: state.isSelected
-                                ? "#0ec6d5"
-                                : "#fff",
-                              color: state.isSelected ? "#fff" : "#000",
-                            }),
-                          }}
-                        />
-                      </div>
-                      <div>
-                        <RangeComponent />
+                      <div className="grid grid-cols-3 gap-5 px-12 py-4">
+                        <div className="">
+                          <label
+                            htmlFor=""
+                            className="text-gray-500 font-semibold text-sm"
+                          >
+                            PROPERTY ID
+                          </label>
+                          <br />
+                          <div className=" border border-gray-300 mt-1  rounded py-2 px-2">
+                            <input
+                              className="outline-none   "
+                              placeholder="Enter Id"
+                              {...register("exampleRequired")}
+                            />{" "}
+                          </div>
+                        </div>
+                        <div className="">
+                          <label
+                            htmlFor=""
+                            className="text-gray-500 font-semibold text-sm"
+                          >
+                            PROPERTY ID
+                          </label>
+                          <br />
+                          <div className=" border border-gray-300 mt-1  rounded py-2 px-2">
+                            <input
+                              className="outline-none   "
+                              placeholder="Enter Id"
+                              {...register("exampleRequired")}
+                            />{" "}
+                          </div>
+                        </div>
+                        <div className="">
+                          <label
+                            htmlFor=""
+                            className="text-gray-500 font-semibold text-sm"
+                          >
+                            PROPERTY ID
+                          </label>
+                          <br />
+                          <div className=" border border-gray-300 mt-1  rounded py-2 px-2">
+                            <input
+                              className="outline-none   "
+                              placeholder="Enter Id"
+                              {...register("exampleRequired")}
+                            />{" "}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   )}

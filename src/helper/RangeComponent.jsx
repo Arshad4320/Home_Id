@@ -1,48 +1,32 @@
-/* eslint-disable react/prop-types */
-
+import MultiRangeSlider from "multi-range-slider-react";
 import { useState } from "react";
-import { Range } from "react-range";
-
-const RangeComponent = () => {
-  const [values, setValues] = useState([50]);
+function RangeComponent() {
+  const [minValue, set_minValue] = useState(25);
+  const [maxValue, set_maxValue] = useState(75);
+  const handleInput = (e) => {
+    set_minValue(e.minValue);
+    set_maxValue(e.maxValue);
+  };
 
   return (
-    <Range
-      step={0.1}
-      min={0}
-      max={1000}
-      values={values}
-      onChange={(newValues) => setValues(newValues)}
-      renderTrack={({ props, children }) => (
-        <div
-          {...props}
-          style={{
-            ...props.style,
-            height: "5px",
-            width: "100%",
-            backgroundColor: "#ccc",
-          }}
-        >
-          {children}
-        </div>
-      )}
-      renderThumb={({ props }) => (
-        <div
-          {...props}
-          style={{
-            ...props.style,
-            height: "20px",
-            width: "20px",
-            backgroundColor: "#999",
-            borderRadius: "100%",
-            border: "none",
-          }}
-        >
-          <p className="border-0"> {values[0]}</p>
-        </div>
-      )}
-    />
+    <div className="App">
+      <MultiRangeSlider
+        min={0}
+        max={100}
+        step={5}
+        minValue={minValue}
+        maxValue={maxValue}
+        onInput={(e) => {
+          handleInput(e);
+        }}
+      />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ margin: "10px" }}>onInput:</div>
+        <div style={{ margin: "10px" }}>{minValue}</div>
+        <div style={{ margin: "10px" }}>{maxValue}</div>
+      </div>
+    </div>
   );
-};
+}
 
 export default RangeComponent;
