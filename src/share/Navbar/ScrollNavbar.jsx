@@ -16,13 +16,19 @@ const ScrollNavbar = ({ show }) => {
             <Link className="text-gray-700 font-semibold text-md p-3" to="/">
               Home
             </Link>
-            <Link className="text-gray-700 font-semibold text-md p-3" to="/">
+            <Link
+              className="text-gray-700 font-semibold text-md p-3"
+              to="admin/dashbord"
+            >
               Dashboard
             </Link>
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <Link className="text-gray-700 font-semibold text-md p-3">
+          <Link
+            to="/signin"
+            className="text-gray-700 font-semibold text-md p-3"
+          >
             Sign In
           </Link>
           <Link className="text-gray-700 font-semibold text-md p-3">
