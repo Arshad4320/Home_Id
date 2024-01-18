@@ -43,17 +43,19 @@ const ConstantCard = () => {
         <div className="max-w-2xl mx-auto">
           <Heading label="We have the most listings and constant updates. So you’ll never miss out." />
         </div>
-        <div className="grid grid-col-1 gap-5 md:grid-cols-1 md:mx-7 lg:grid-cols-3 py-10">
+        <div className="grid grid-col-1 gap-5 md:grid-cols-1 md:mx-7 lg:grid-cols-3 py-12">
           {carts.map((cart) => {
             return (
-              <div className=" py-8 lg:py-4" key={cart.id}>
-                <div className="flex gap-1 justify-center md:gap-8 lg:gap-4 shadow-md hover:shadow-xl bg-white rounded-md p-8 lg:h-72 xl:h-60">
-                  <div className="h-24 md:w-28 lg:h-24 lg:w-64 w-full ">
+              <div className="  lg:py-4" key={cart.id}>
+                <div className="flex flex-col md:flex-row gap-1 justify-center md:gap-8 lg:gap-4 shadow-md hover:shadow-xl bg-white rounded-md p-8 lg:h-72 xl:h-60">
+                  <div className="w-36 h-24 sm:w-40 sm:h-28 flex mx-auto   md:w-28 lg:h-24 lg:w-64  ">
                     <img className="h-full w-full" src={cart.img} alt="" />
                   </div>
-                  <div className="m-3">
+                  <div className="my-3">
                     <h3 className="text-2xl text-gray-800">{cart.name}</h3>
-                    <p className=" text-gray-600 ">{cart.description}</p>
+                    <p className=" text-gray-600 text-justify ">
+                      {cart.description}
+                    </p>
                   </div>
                 </div>
               </div>
