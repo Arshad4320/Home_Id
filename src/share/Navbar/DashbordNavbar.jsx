@@ -7,7 +7,7 @@ const DashBordNavbar = () => {
   return (
     <>
       <MobileNavber />
-      <div className="hidden lg:block shadow-lg">
+      <div className="hidden lg:block  border-b-2">
         <div className="max-w-7xl mx-auto flex justify-end p-3">
           <div className="flex items-center justify-center">
             <Link

@@ -27,7 +27,7 @@ const MobileNavber = () => {
         About
       </Link>
       <Link
-        to="admin/dashbord"
+        to="/admin/dashboard"
         className="block  px-2 py-2 font-semibold text-white hover:text-gray-200 rounded "
       >
         DashBoard

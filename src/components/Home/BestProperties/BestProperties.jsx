@@ -1,7 +1,7 @@
-import Button from "../../Button/Button";
 import Carusol from "../../Carusol/Carusol";
 import Heading from "../../Heading/Heading";
 import Paragraph from "../../paragraph/paragraph";
+import Button from "./../../Button/Button";
 
 const BestProperties = () => {
   return (

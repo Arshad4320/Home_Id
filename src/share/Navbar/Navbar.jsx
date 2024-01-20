@@ -11,7 +11,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="admin/dashbord"
+              to="/admin/dashboard"
               className="text-white font-semibold text-md p-3"
             >
               Dashboard

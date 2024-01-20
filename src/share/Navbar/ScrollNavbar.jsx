@@ -18,7 +18,7 @@ const ScrollNavbar = ({ show }) => {
             </Link>
             <Link
               className="text-gray-700 font-semibold text-md p-3"
-              to="admin/dashbord"
+              to="/admin/dashboard"
             >
               Dashboard
             </Link>
