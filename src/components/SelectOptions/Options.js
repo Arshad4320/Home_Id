@@ -29,7 +29,7 @@ export const allAreaOptions = [
   { value: "Taj Mohol", label: "Taj Mohol" },
 ];
 export const homeType = [
-  { value: "", label: "Home Type" },
+  { value: "Home Type", label: "Home Type" },
   { value: "Single-Family Home", label: "Single-Family Home" },
   { value: " Multi-Family Home", label: " Multi-Family Home" },
   { value: "Central City", label: "Central City" },
