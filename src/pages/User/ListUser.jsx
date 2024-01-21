@@ -1,6 +1,8 @@
 import React from "react";
 import ButtonComponent from "../../components/Button/ButtonComponent";
 import { Link } from "react-router-dom";
+import { BiSolidEdit } from "react-icons/bi";
+import { RiDeleteBin6Line } from "react-icons/ri";
 const listUser = [
   {
     id: 1,
@@ -77,7 +79,7 @@ const ListUser = () => {
               <th className="p-2 border">Phone</th>
               <th className="p-2 border">Date</th>
               <th className="p-2 border">Image</th>
-              <th className="p-2 border">Status</th>
+              <th className="p-2 border">Status</th>{" "}
               <th className="p-2 border">Action</th>
             </tr>
           </thead>
@@ -101,7 +103,14 @@ const ListUser = () => {
                 </td>
 
                 <td className="p-2 border text-center">{user.status}</td>
-                <td className="p-2 border text-center">{user.action}</td>
+                <td className="p-2 border text-center ">
+                  <div className="flex items-center gap-2 justify-center p-2 rounded bg-secondary hover:bg-secondary2 text-white">
+                    <Link to="/admin/dashboard/edit-user">
+                      <BiSolidEdit />
+                    </Link>
+                    <RiDeleteBin6Line />
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>

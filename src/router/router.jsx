@@ -12,6 +12,8 @@ import AgentList from "../pages/Agents/AgentList";
 import AddAgents from "../pages/Agents/AddAgents";
 import SeeAllProperties from "../pages/SeeAllProperties/SeeAllProperties";
 import Signup from "../pages/Auth/Signup/Signup";
+import EditAgents from "../pages/Agents/EditAgents";
+import EditUser from "../pages/User/EditUser";
 
 const router = createBrowserRouter([
   {
@@ -62,12 +64,20 @@ const router = createBrowserRouter([
         element: <ListUser />,
       },
       {
-        path: "/admin/dashboard/agent-list",
-        element: <AgentList />,
+        path: "/admin/dashboard/edit-user",
+        element: <EditUser />,
       },
       {
         path: "/admin/dashboard/add-agent",
         element: <AddAgents />,
+      },
+      {
+        path: "/admin/dashboard/agent-list",
+        element: <AgentList />,
+      },
+      {
+        path: "/admin/dashboard/edit-agent",
+        element: <EditAgents />,
       },
     ],
   },

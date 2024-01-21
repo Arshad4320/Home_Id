@@ -1,6 +1,8 @@
 import React from "react";
 import ButtonComponent from "../../components/Button/ButtonComponent";
 import { Link } from "react-router-dom";
+import { BiSolidEdit } from "react-icons/bi";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const agentList = [
   {
@@ -102,7 +104,15 @@ const AgentList = () => {
                 </td>
 
                 <td className="p-2 border text-center">{user.status}</td>
-                <td className="p-2 border text-center">{user.action}</td>
+
+                <td className="p-2 border text-center ">
+                  <div className="flex items-center gap-2 justify-center p-2 rounded bg-secondary hover:bg-secondary2 text-white">
+                    <Link to="/admin/dashboard/edit-agent">
+                      <BiSolidEdit />
+                    </Link>
+                    <RiDeleteBin6Line />
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>

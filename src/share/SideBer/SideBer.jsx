@@ -14,7 +14,7 @@ const SideBer = () => {
   const [agents, setAgents] = useState(false);
   const [invoice, setInvoice] = useState(false);
   return (
-    <div className=" pl-8 h-screen fixed top-0     hidden lg:block">
+    <div className=" pl-8 h-screen fixed top-0    hidden lg:block">
       <div className=" py-6">
         <Link to="/">
           {" "}
