@@ -35,3 +35,9 @@ export const homeType = [
   { value: "Central City", label: "Central City" },
   { value: "Town House", label: "Town House" },
 ];
+export const sortBy = [
+  { value: "Top Selling", label: "Top Selling" },
+  { value: "Most Viewed", label: "Most Viewed" },
+  { value: " Price (Low To High)", label: "  Price (Low To High)" },
+  { value: " Price (High To Low)", label: "  Price (High To Low)" },
+];

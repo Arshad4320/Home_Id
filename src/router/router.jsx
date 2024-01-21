@@ -10,6 +10,8 @@ import ListUser from "../pages/User/ListUser";
 import DashBoard from "../pages/DashBoard/DashBoard";
 import AgentList from "../pages/Agents/AgentList";
 import AddAgents from "../pages/Agents/AddAgents";
+import SeeAllProperties from "../pages/SeeAllProperties/SeeAllProperties";
+import Signup from "../pages/Auth/Signup/Signup";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "/signin",
         element: <SignIn />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
+      {
+        path: "/properties",
+        element: <SeeAllProperties />,
       },
       {
         path: "*",

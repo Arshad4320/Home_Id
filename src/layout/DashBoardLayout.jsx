@@ -9,11 +9,11 @@ const DashBoardLayout = () => {
     <div className="">
       <DashBordNavbar />
       <div className="flex justify-between">
-        <div className="[20%] h-full ">
+        <div className="lg:[20%]   h-full ">
           <SideBer />
         </div>
 
-        <div className="w-[80%] bg-gray-100 h-screen ">
+        <div className="w-full lg:w-[80%] bg-gray-100 h-screen ">
           <Outlet />
         </div>
       </div>
