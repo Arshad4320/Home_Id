@@ -58,7 +58,7 @@ const allProperties = [
 const SeeAllProperties = () => {
   return (
     <div className="max-w-7xl mx-auto pt-20 mb-14 ">
-      <Heading label={"Listing Full Width List"} />
+      <Heading label={"All Properties"} />
       <PropertiOptions />
       <div className="flex justify-between ml-5 py-14">
         <h3 className="font-semibold text-xl  text-gray-800">
@@ -89,7 +89,7 @@ const SeeAllProperties = () => {
           />
         </div>
       </div>
-      <div className="ml-5 ">
+      <div className="lg:ml-5 ">
         {allProperties.map((property) => {
           return (
             <div

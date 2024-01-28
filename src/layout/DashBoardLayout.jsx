@@ -13,7 +13,7 @@ const DashBoardLayout = () => {
           <SideBer />
         </div>
 
-        <div className="w-full lg:w-[80%] bg-gray-100 h-screen ">
+        <div className="w-full lg:w-[80%] bg-gray-100  ">
           <Outlet />
         </div>
       </div>

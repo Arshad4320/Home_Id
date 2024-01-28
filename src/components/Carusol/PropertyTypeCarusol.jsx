@@ -7,6 +7,7 @@ import img from "../../assets/image/carusol/hosue.png";
 import img2 from "../../assets/image/carusol/apartment.png";
 import img3 from "../../assets/image/carusol/office.png";
 import img4 from "../../assets/image/carusol/vila.png";
+import { Link } from "react-router-dom";
 
 const carts = [
   {
@@ -112,17 +113,19 @@ const PropertyTypeCarusol = () => {
       </div>
       <Slider ref={slider} className="px-18" {...settings}>
         {carts.map((cart) => (
-          <div
-            key={cart.id}
-            className="  p-12 hover:bg-white hover:shadow-2xl transition ease-in-out delay-150 rounded-md "
-          >
-            <div className="flex justify-center items-center ">
-              <img className=" " src={cart.img} />
+          <Link to={`/properties/city/${cart.id}`}>
+            <div
+              key={cart.id}
+              className="  p-12 hover:bg-white hover:shadow-2xl transition ease-in-out delay-150 rounded-md "
+            >
+              <div className="flex justify-center items-center ">
+                <img className=" " src={cart.img} />
+              </div>
+              <h3 className="text-center text-gray-700 text-lg mt-4 font-semibold">
+                {cart.name}
+              </h3>
             </div>
-            <h3 className="text-center text-gray-700 text-lg mt-4 font-semibold">
-              {cart.name}
-            </h3>
-          </div>
+          </Link>
         ))}
       </Slider>
     </>

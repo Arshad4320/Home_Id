@@ -14,6 +14,14 @@ import SeeAllProperties from "../pages/SeeAllProperties/SeeAllProperties";
 import Signup from "../pages/Auth/Signup/Signup";
 import EditAgents from "../pages/Agents/EditAgents";
 import EditUser from "../pages/User/EditUser";
+import Package from "../pages/Package/Package";
+import CityWiseProperties from "../pages/CityWiseProperties/CityWiseProperties";
+import PackageList from "../pages/DashBoard/Package/PackageList";
+import MyPackage from "./../pages/DashBoard/Package/MyPackage";
+import AddType from "../pages/Type/AddType";
+import ListType from "../pages/Type/ListType";
+import ListProperty from "../Property/ListProperty";
+import AddProperty from "../Property/AddProperty";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +47,14 @@ const router = createBrowserRouter([
       {
         path: "/properties",
         element: <SeeAllProperties />,
+      },
+      {
+        path: "/package/:id",
+        element: <Package />,
+      },
+      {
+        path: "/properties/city/:id",
+        element: <CityWiseProperties />,
       },
       {
         path: "*",
@@ -78,6 +94,30 @@ const router = createBrowserRouter([
       {
         path: "/admin/dashboard/edit-agent",
         element: <EditAgents />,
+      },
+      {
+        path: "/admin/dashboard/user/package-list",
+        element: <PackageList />,
+      },
+      {
+        path: "/admin/dashboard/user/my-package",
+        element: <MyPackage />,
+      },
+      {
+        path: "/admin/dashboard/add-type",
+        element: <AddType />,
+      },
+      {
+        path: "/admin/dashboard/list-type",
+        element: <ListType />,
+      },
+      {
+        path: "/admin/dashboard/list-property",
+        element: <ListProperty />,
+      },
+      {
+        path: "/admin/dashboard/add-property",
+        element: <AddProperty />,
       },
     ],
   },

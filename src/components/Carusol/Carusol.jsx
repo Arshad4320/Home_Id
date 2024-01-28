@@ -48,17 +48,10 @@ import React from "react";
 
 import Slider from "react-slick";
 
-import { useEffect } from "react";
 import CarusolCard from "./CarusolCard";
+import { Link } from "react-router-dom";
 
 const Carusol = () => {
-  useEffect(() => {
-    fetch(
-      "https://weero-furniture-server.onrender.com/api/product/get-products"
-    )
-      .then((res) => res.json())
-      .then((data) => setProducts(data.data));
-  }, []);
   const settings = {
     dots: true,
     infinite: true,
@@ -119,11 +112,13 @@ const Carusol = () => {
     <>
       <Slider className="mt-4" ref={slider} {...settings}>
         {cards.map((card) => (
-          <CarusolCard
-            className=" !flex flex-col mx-auto justify-center items-center"
-            key={card.id}
-            card={card}
-          />
+          <Link to={`/package/${card.id}`}>
+            <CarusolCard
+              className=" !flex flex-col mx-auto justify-center items-center"
+              key={card.id}
+              card={card}
+            />
+          </Link>
         ))}
       </Slider>
     </>

@@ -40,8 +40,8 @@ const ConstantCard = () => {
   return (
     <div className="bg-green-50 mt-20">
       <div className="md:max-w-7xl mx-5 md:mx-auto  py-10">
-        <div className="max-w-2xl mx-auto">
-          <Heading label="We have the most listings and constant updates. So you’ll never miss out." />
+        <div className="flex justify-center">
+          <Heading label="Within Your Budget" />
         </div>
         <div className="grid grid-col-1 gap-5 md:grid-cols-1 md:mx-7 lg:grid-cols-3 py-12">
           {carts.map((cart) => {

@@ -13,7 +13,7 @@ const BestProperties = () => {
         />
         <br />
 
-        <Button className="" label="Seel All Properties" />
+        <Button className="" label="Seel All Package" />
       </div>
       <Paragraph
         label={

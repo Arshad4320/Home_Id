@@ -8,7 +8,7 @@ const PropertiesRent = () => {
   return (
     <div className="md:max-w-7xl md:mx-auto pt-20  mb-14">
       <div className="mx-5 md:mx-0 md:flex justify-between ">
-        <Heading className="mb-10 md:mb-0" label={"Best Properties For Rent"} />
+        <Heading className="mb-10 md:mb-0" label={"Propertys"} />
         <Link to="/properties">
           <Button label={"See All Properties"} />
         </Link>

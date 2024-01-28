@@ -7,7 +7,7 @@ const PropertyType = () => {
   return (
     <div className="lg:max-w-7xl mx-auto py-16 lg:flex">
       <div className="w-full  lg:w-2/6">
-        <Heading label={"Explore by Property Type"} />
+        <Heading label={"Locations"} />
         <Paragraph
           label={
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit"

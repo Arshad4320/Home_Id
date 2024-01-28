@@ -6,18 +6,20 @@ import Neighborhood from "../../components/Home/Neighborhood/Neighborhood";
 import Partner from "../../components/Home/Partner/Partner";
 import PropertiesRent from "../../components/Home/PropertiesRent/PropertiesRent";
 import PropertyType from "../../components/Home/PropertyType/PropertyType";
+import PackageList from "../DashBoard/Package/PackageList";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <BestProperties />
+
       <PropertyType />
+      <BestProperties />
       <PropertiesRent />
       <Neighborhood />
       <Destinations />
       <ConstantCard />
-      <Partner />
+      {/* <Partner /> */}
     </div>
   );
 };
