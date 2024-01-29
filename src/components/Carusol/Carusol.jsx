@@ -112,7 +112,7 @@ const Carusol = () => {
     <>
       <Slider className="mt-4" ref={slider} {...settings}>
         {cards.map((card) => (
-          <Link to={`/package/${card.id}`}>
+          <Link to={`/single-property/${card.id}`}>
             <CarusolCard
               className=" !flex flex-col mx-auto justify-center items-center"
               key={card.id}

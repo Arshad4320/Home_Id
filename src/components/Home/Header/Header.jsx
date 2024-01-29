@@ -25,7 +25,8 @@ const Header = () => {
   const headerStyle = {
     backgroundImage: `url(${banner})`,
     backgroundSize: "cover",
-    height: `${open ? "900px" : "100%"}`,
+    // height: `${open ? "900px" : "100%"}`,
+    // height: "100%",
   };
 
   useEffect(() => {
@@ -61,20 +62,20 @@ const Header = () => {
         <Navbar />
         <ScrollNavbar show={scrolling} />
         <div className="flex items-center justify-center">
-          <div className="py-16">
+          <div className="py-28">
             <div className="sm:mt-20 md:mt-24 mx-4 md:mx-8  md:mx-18 md:text-center">
-              <p className="text-white font-medium text-2xl ">
+              {/* <p className="text-white font-medium text-2xl ">
                 LET US GUIDE YOUR HOME
-              </p>
+              </p> */}
               <h1 className="text-white font-semibold mt-4 md:mt-10  text-4xl sm:text-5xl md:text-6xl lg:text-7xl  ">
-                Find Your Dream Home
+                FIND YOUR PLACE TO STAY
               </h1>
               {/* search section*/}
             </div>
             <SearchInput open={open} setOpen={setOpen} />
             <div className="max-w-7xl mx-auto mt-20 bg-white rounded-md hidden lg:block">
               <div>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                {/* <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="grid grid-cols-4 gap-5 px-7 ">
                     <div className="p-6">
                       <label
@@ -335,7 +336,7 @@ const Header = () => {
                       </div>
                     </div>
                   )}
-                </form>
+                </form> */}
               </div>
             </div>
           </div>

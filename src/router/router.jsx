@@ -16,12 +16,23 @@ import EditAgents from "../pages/Agents/EditAgents";
 import EditUser from "../pages/User/EditUser";
 import Package from "../pages/Package/Package";
 import CityWiseProperties from "../pages/CityWiseProperties/CityWiseProperties";
-import PackageList from "../pages/DashBoard/Package/PackageList";
-import MyPackage from "./../pages/DashBoard/Package/MyPackage";
+import PackageList from "../pages/Package/PackageList";
+import MyPackage from "../pages/Package/MyPackage";
 import AddType from "../pages/Type/AddType";
 import ListType from "../pages/Type/ListType";
-import ListProperty from "../Property/ListProperty";
-import AddProperty from "../Property/AddProperty";
+
+import AddBooking from "../pages/Booking/AddBooking";
+import ListBooking from "../pages/Booking/ListBooking";
+import EditBooking from "../pages/Booking/EditBooking";
+import EditType from "./../pages/Type/EditType";
+
+import AddPackage from "../pages/Package/AddPackage";
+
+import SingleProperty from "../pages/Property/SinglePropety";
+import ListProperty from "../pages/Property/ListProperty";
+import AddProperty from "../pages/Property/AddProperty";
+import EditProperty from "../pages/Property/EditProperty";
+import SinglePackage from "../pages/Package/singlePackage";
 
 const router = createBrowserRouter([
   {
@@ -48,13 +59,18 @@ const router = createBrowserRouter([
         path: "/properties",
         element: <SeeAllProperties />,
       },
-      {
-        path: "/package/:id",
-        element: <Package />,
-      },
+
       {
         path: "/properties/city/:id",
         element: <CityWiseProperties />,
+      },
+      {
+        path: "/single-property/:id",
+        element: <SingleProperty />,
+      },
+      {
+        path: "/single-package/:id",
+        element: <SinglePackage />,
       },
       {
         path: "*",
@@ -100,6 +116,10 @@ const router = createBrowserRouter([
         element: <PackageList />,
       },
       {
+        path: "/admin/dashboard/user/add-package",
+        element: <AddPackage />,
+      },
+      {
         path: "/admin/dashboard/user/my-package",
         element: <MyPackage />,
       },
@@ -112,12 +132,32 @@ const router = createBrowserRouter([
         element: <ListType />,
       },
       {
+        path: "/admin/dashboard/edit-type",
+        element: <EditType />,
+      },
+      {
         path: "/admin/dashboard/list-property",
         element: <ListProperty />,
       },
       {
         path: "/admin/dashboard/add-property",
         element: <AddProperty />,
+      },
+      {
+        path: "/admin/dashboard/edit-property",
+        element: <EditProperty />,
+      },
+      {
+        path: "/admin/dashboard/add-booking",
+        element: <AddBooking />,
+      },
+      {
+        path: "/admin/dashboard/list-booking",
+        element: <ListBooking />,
+      },
+      {
+        path: "/admin/dashboard/edit-booking",
+        element: <EditBooking />,
       },
     ],
   },

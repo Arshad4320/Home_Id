@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 
 import React from "react";
-import ButtonComponent from "../components/Button/ButtonComponent";
+import ButtonComponent from "../../components/Button/ButtonComponent";
 
 const AddProperty = () => {
   const { register, handleSubmit } = useForm();

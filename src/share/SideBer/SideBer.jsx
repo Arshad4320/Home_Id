@@ -9,7 +9,7 @@ import { TfiPackage } from "react-icons/tfi";
 import { FaRegUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { useState } from "react";
-import Package from "./../../pages/Package/Package";
+import Package from "../../pages/Package/Package";
 const SideBer = () => {
   const [open, setOpen] = useState(false);
   const [agents, setAgents] = useState(false);
@@ -225,12 +225,12 @@ const SideBer = () => {
                   >
                     Add Property
                   </Link>
-                  <Link
+                  {/* <Link
                     className="text-gray-800 font-semibold hover:text-secondary duration-500 flex items-center gap-2 py-2"
                     to="/admin/dashboard"
                   >
                     Edit Property
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>
@@ -317,21 +317,15 @@ const SideBer = () => {
                 <div className="ml-5  items-center w-full transition-all duration-1000 ease-in-out  ">
                   <Link
                     className="text-gray-800 font-semibold hover:text-secondary duration-500 flex items-center gap-2 py-2"
-                    to="/admin/dashboard"
+                    to="/admin/dashboard/list-booking"
                   >
                     List Booking
                   </Link>
                   <Link
                     className="text-gray-800 font-semibold hover:text-secondary duration-500 flex items-center gap-2 py-2"
-                    to="/admin/dashboard"
+                    to="/admin/dashboard/add-booking"
                   >
                     Add Booking
-                  </Link>
-                  <Link
-                    className="text-gray-800 font-semibold hover:text-secondary duration-500 flex items-center gap-2 py-2"
-                    to="/admin/dashboard"
-                  >
-                    Edit Booking
                   </Link>
                 </div>
               )}
@@ -371,9 +365,9 @@ const SideBer = () => {
                   </Link>
                   <Link
                     className="text-gray-800 font-semibold hover:text-secondary duration-500 flex items-center gap-2 py-2"
-                    to="/admin/dashboard/user/my-package"
+                    to="/admin/dashboard/user/add-package"
                   >
-                    My Package
+                    Add Package
                   </Link>
                 </div>
               )}
@@ -386,6 +380,12 @@ const SideBer = () => {
             MANAGE ACOUNT
           </h2>
           <ul>
+            <Link
+              className="text-gray-800 font-semibold hover:text-secondary duration-500 flex items-center gap-2 py-2"
+              to="/admin/dashboard/user/my-package"
+            >
+              <TfiPackage /> My Package
+            </Link>
             <Link className="text-gray-800 font-semibold hover:text-secondary duration-500 flex items-center gap-2 py-2">
               <FaRegUser className="text-lg text-gray-500" />
 

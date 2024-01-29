@@ -51,7 +51,7 @@ const cards = [
   },
 ];
 
-const Package = () => {
+const SingleProperty = () => {
   const [heart, setHeart] = useState(false);
   const { id } = useParams();
 
@@ -138,4 +138,4 @@ const Package = () => {
   );
 };
 
-export default Package;
+export default SingleProperty;
