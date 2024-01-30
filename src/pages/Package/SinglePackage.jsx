@@ -58,14 +58,16 @@ const SinglePackage = () => {
 
   return (
     <div className="max-w-7xl  pt-20 mb-14 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-5  gap-8">
         <div key={data.id} className="">
           <div className="flex justify-between mb-4">
             <p className=" font-bold text-4xl text-gray-800">
               {data.packageName}
             </p>
 
-            <p className="font-bold text-4xl text-gray-800">{data.price}</p>
+            <p className="font-bold text-3xl lg:text-4xl text-gray-800">
+              {data.price}
+            </p>
           </div>
           <div className="relative group">
             <img className="rounded-t-md" src={data.img} alt="" />

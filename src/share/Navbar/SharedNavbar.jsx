@@ -12,7 +12,7 @@ const SharedNavbar = () => {
           pathname === "/" ? "hidden" : "hidden lg:block"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex justify-between p-6 ">
+        <div className="max-w-7xl   mx-auto flex justify-between p-6 ">
           <div className="flex gap-3 items-center justify-center">
             <img src={logo} />
             <div>

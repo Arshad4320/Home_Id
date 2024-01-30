@@ -9,7 +9,7 @@ const AddUser = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className=" m-10 bg-white p-5">
+    <div className="m-4 lg:m-10 bg-white p-5">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label className="font-medium text-gray-700" htmlFor="name">

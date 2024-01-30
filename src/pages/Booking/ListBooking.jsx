@@ -54,7 +54,7 @@ const listUser = [
 
 const ListBooking = () => {
   return (
-    <div className=" m-10 ">
+    <div className=" m-4 lg:m-10 ">
       <div className="flex justify-between mb-5">
         {" "}
         <Link to="/admin/dashboard/add-booking">
@@ -62,7 +62,7 @@ const ListBooking = () => {
           <ButtonComponent label={"Add Booking"} />{" "}
         </Link>
         <input
-          className="border rounded-md outline-secondary text-xl px-3"
+          className="border rounded-md outline-secondary text-xl px-1 lg:px-3"
           placeholder="Search..."
         />
       </div>

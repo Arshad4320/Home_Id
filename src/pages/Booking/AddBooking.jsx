@@ -9,7 +9,7 @@ const AddBooking = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className=" m-10 bg-white p-5">
+    <div className="m-4 lg:m-10 bg-white p-5">
       <p className="text-3xl font-semibold my-2">Create New Booking</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>

@@ -3,7 +3,7 @@
 const Heading = ({ label, className }) => {
   return (
     <div
-      className={`relative text-2xl sm:text-3xl md:text-4xl md:mx-5   font-medium text-gray-800 ${className}`}
+      className={`relative text-2xl sm:text-3xl ml-5 md:text-4xl md:mx-5   font-medium text-gray-800 ${className}`}
     >
       <div className="relative z-10 ">{label}</div>
       <div

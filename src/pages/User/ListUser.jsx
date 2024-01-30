@@ -57,7 +57,7 @@ const listUser = [
 ];
 const ListUser = () => {
   return (
-    <div className=" m-10 ">
+    <div className="m-4 lg:m-10 ">
       <div className="flex justify-between mb-5">
         {" "}
         <Link to="/admin/dashboard/add-user">

@@ -8,7 +8,7 @@ const EditProperty = () => {
 
   const onSubmit = (data) => console.log(data);
   return (
-    <div className=" m-10 grid grid-cols-2 gap-10">
+    <div className="m-4 lg:m-10   grid grid-cols-1 md:grid-cols-2 gap-10">
       <div className="bg-white p-5 rounded-md">
         <div>
           <h3 className="text-3xl text-gray-700 font-medium mb-2">Photo</h3>

@@ -58,7 +58,6 @@ const Header = () => {
   return (
     <div>
       <div style={headerStyle}>
-        <MobileNavber />
         <Navbar />
         <ScrollNavbar show={scrolling} />
         <div className="flex items-center justify-center">

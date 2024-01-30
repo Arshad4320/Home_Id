@@ -7,7 +7,7 @@ const Signup = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className=" my-20 bg-white mx-auto p-10 border rounded-md shadow-sm w-full md:w-1/3">
+    <div className=" my-28  bg-white md:mx-auto p-10 border rounded-md shadow-sm w-full md:w-1/2 lg:w-1/3">
       <h2 className="text-2xl font-semibold mb-3">Sign Up</h2>
       <p className="text-gray-800 text-[16px] mb-3 font-medium">
         Already have an account ?

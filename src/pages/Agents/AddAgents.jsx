@@ -21,7 +21,7 @@ const AddAgents = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className=" m-10 bg-white p-5">
+    <div className=" m-4 lg:m-10 bg-white p-5">
       <h3 className="font-semibold text-2xl text-gray-700 mb-3">
         Create New Agent
       </h3>

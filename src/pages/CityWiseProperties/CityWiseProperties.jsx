@@ -58,8 +58,8 @@ const CityWiseProperties = () => {
   const singleData = cards.find((card) => card.id === parseInt(id));
 
   return (
-    <div className="md:max-w-7xl md:mx-auto pt-20  mb-14">
-      <Heading className={"m-5"} label={"City Wise Properties"} />
+    <div className="md:max-w-7xl md:mx-auto pt-20  mb-14 mx-5">
+      <Heading label={"City Wise Properties"} />
 
       <div className="mt-8 lg:ml-5 ">
         <Select

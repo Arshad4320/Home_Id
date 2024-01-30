@@ -9,7 +9,7 @@ const AddProperty = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className=" m-10 bg-white p-5">
+    <div className=" m-4 lg:m-10 bg-white p-5">
       <p className="text-4xl font-semibold py-4">Add New Property</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>

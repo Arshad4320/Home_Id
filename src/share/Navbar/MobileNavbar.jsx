@@ -4,6 +4,7 @@ import { FaOutdent } from "react-icons/fa";
 import { HiMiniXMark } from "react-icons/hi2";
 import logo from "../../assets/image/logo.png";
 import DashBoard from "./../../pages/DashBoard/DashBoard";
+import MobileNavbarComponet from "./MobileNavbarComponet";
 
 const MobileNavber = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,28 +21,21 @@ const MobileNavber = () => {
       >
         Home
       </Link>
+
       <Link
-        to="/about"
+        to="/signin"
         className="block  px-2 py-2 font-semibold text-white hover:text-gray-200 rounded "
       >
-        About
+        Sign In
       </Link>
       <Link
-        to="/admin/dashboard"
+        to="/signup"
         className="block  px-2 py-2 font-semibold text-white hover:text-gray-200 rounded "
       >
-        DashBoard
-      </Link>
-      <Link
-        to="/login"
-        className="block  px-2 py-2 font-semibold text-white hover:text-gray-200 rounded "
-      >
-        Login
+        Sign Up
       </Link>
     </>
   );
-  // className={`absolute top-0 duration-700   ${isOpen ? "left-0 duration-700" : "left-[-1200px]"
-  //                         } z-30 bg-primary w-1/2 p-3  h-screen`}
 
   return (
     <div className=" bg-primary block lg:hidden   p-4 0  shadow-md ">
@@ -68,6 +62,7 @@ const MobileNavber = () => {
         <div>
           <ul className="space-y-2 ">
             <li>{routing}</li>
+            <MobileNavbarComponet />
           </ul>
         </div>
       </div>
